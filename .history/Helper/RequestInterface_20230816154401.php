@@ -1,6 +1,6 @@
 <?php
 
-namespace Mysho\ComgateBundle\Helper;
+namespace Mufin\ComgateBundle\Helper;
 
 interface RequestInterface
 {

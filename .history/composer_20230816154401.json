@@ -1,0 +1,21 @@
+{
+    "name": "mufin/comgate-bundle",
+    "description": "",
+    "type": "symfony-bundle",
+    "license": "MIT",
+    "homepage": "https://github.com/mufinsk",
+    "authors": [
+        {
+            "name": "Mufin, s.r.o.",
+            "email": "info@mufin.sk"
+        }
+    ],
+    "require": {
+        "php": "^7.3|^8.0",
+        "symfony/framework-bundle": "5.2.*",
+        "symfony/yaml": "5.2.*"
+    },
+    "autoload": {
+        "psr-4": { "Mufin\\ComgateBundle\\": "" }
+    }
+}

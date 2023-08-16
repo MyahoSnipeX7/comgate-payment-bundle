@@ -1,11 +1,11 @@
 <?php
 
 
-namespace Mysho\ComgateBundle\Service;
+namespace Mufin\ComgateBundle\Service;
 
 use GuzzleHttp\Client;
-use Mysho\ComgateBundle\Helper\CreatePaymentResponse;
-use Mysho\ComgateBundle\Helper\RequestInterface;
+use Mufin\ComgateBundle\Helper\CreatePaymentResponse;
+use Mufin\ComgateBundle\Helper\RequestInterface;
 
 
 class ComgateConnector

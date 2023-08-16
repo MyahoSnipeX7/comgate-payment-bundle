@@ -1,5 +1,5 @@
 {
-    "name": "mysho/comgate-bundle",
+    "name": "MyshoSnipeX7/comgate-bundle",
     "description": "",
     "type": "symfony-bundle",
     "license": "MIT",
@@ -16,6 +16,6 @@
         "symfony/yaml": "6.0.*"
     },
     "autoload": {
-        "psr-4": { "Mysho\\ComgateBundle\\": "" }
+        "psr-4": { "MyshoSnipeX7\\ComgateBundle\\": "" }
     }
 }

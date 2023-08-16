@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Mysho\ComgateBundle\Exception;
+namespace Mufin\ComgateBundle\Exception;
 
 
 class LabelTooLongException extends \Exception

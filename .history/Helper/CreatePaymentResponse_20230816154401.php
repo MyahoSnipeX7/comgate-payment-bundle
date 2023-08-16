@@ -1,13 +1,13 @@
 <?php
 
 
-namespace Mysho\ComgateBundle\Helper;
+namespace Mufin\ComgateBundle\Helper;
 
 
 
-use Mysho\ComgateBundle\Exception\ErrorCodeException;
-use Mysho\ComgateBundle\Exception\InvalidArgumentException;
-use Mysho\ComgateBundle\Factory\ResponseCodes;
+use Mufin\ComgateBundle\Exception\ErrorCodeException;
+use Mufin\ComgateBundle\Exception\InvalidArgumentException;
+use Mufin\ComgateBundle\Factory\ResponseCodes;
 
 class CreatePaymentResponse
 {

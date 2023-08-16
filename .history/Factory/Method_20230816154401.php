@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Mysho\ComgateBundle\Factory;
+namespace Mufin\ComgateBundle\Factory;
 
 
 class Method

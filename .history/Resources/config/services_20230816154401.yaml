@@ -9,15 +9,15 @@ services:
         autoconfigure: true
         public: false
 
-    Mysho\ComgateBundle\Service\ComgateConnector:
+    Mufin\ComgateBundle\Service\ComgateConnector:
         arguments:
             $params: '%comgate%'
 
-    Mysho\ComgateBundle\Exception\:
+    Mufin\ComgateBundle\Exception\:
         resource: '../../Exception/*'
 
-    Mysho\ComgateBundle\Factory\:
+    Mufin\ComgateBundle\Factory\:
         resource: '../../Factory/*'
 
-    Mysho\ComgateBundle\Helper\:
+    Mufin\ComgateBundle\Helper\:
         resource: '../../Helper/*'

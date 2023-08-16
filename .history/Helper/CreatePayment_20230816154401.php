@@ -1,10 +1,10 @@
 <?php
 
 
-namespace Mysho\ComgateBundle\Helper;
+namespace Mufin\ComgateBundle\Helper;
 
-use Mysho\ComgateBundle\Exception\LabelTooLongException;
-use Mysho\ComgateBundle\Factory\Method;
+use Mufin\ComgateBundle\Exception\LabelTooLongException;
+use Mufin\ComgateBundle\Factory\Method;
 
 class CreatePayment implements RequestInterface
 {
