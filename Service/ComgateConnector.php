@@ -65,4 +65,31 @@ class ComgateConnector
         return new $responseClass($data);
     }
 
+    /**
+     * @param bool $test
+     * @return void
+     */
+    public function setTest(bool $test) 
+    {
+      $this->params['test'] = $test;
+    }
+
+    /**
+     * @param string $secret
+     * @return void
+     */
+    public function setSecret(string $secret) 
+    {
+      $this->params['secret'] = $secret;
+    }
+
+    /**
+     * @param string $merchant
+     * @return void
+     */
+    public function setMerchant(string $merchant) 
+    {
+      $this->params['secret'] = $merchant;
+    }
+
 }
