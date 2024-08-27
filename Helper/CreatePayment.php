@@ -5,6 +5,7 @@ namespace Mysho\ComgateBundle\Helper;
 
 use Mysho\ComgateBundle\Exception\LabelTooLongException;
 use Mysho\ComgateBundle\Factory\Method;
+use Mysho\ComgateBundle\Factory\PaymentCategory;
 
 class CreatePayment implements RequestInterface
 {
@@ -104,6 +105,16 @@ class CreatePayment implements RequestInterface
     private $eetData;
 
     /**
+     * @var string
+     */
+    private $fullName;
+
+    /**
+     * @var PaymentCategory
+     */
+    private $category;
+
+    /**
      * @param int    $price (price in heller so for 10 CZK you must set 1000)
      * @param string $refId (for example orderId)
      * @param string $email (email of client to send confirmation)
@@ -113,13 +124,15 @@ class CreatePayment implements RequestInterface
      *
      * @throws LabelTooLongException
      */
-    public function __construct(int $price, string $refId, string $email, string $label, string $method = Method::ALL, string $curr = 'EUR')
+    public function __construct(int $price, string $refId, string $email, string $label, string $fullName, string $method = Method::ALL, string $curr = 'EUR')
     {
         $this->price  = $price;
         $this->refId  = $refId;
         $this->email  = $email;
         $this->method = $method;
         $this->curr   = $curr;
+        $this->fullName = $fullName;
+
 
         if (mb_strlen($label) > 16) {
             throw new LabelTooLongException('Product label is too long. Max length is 16 chars');
@@ -144,6 +157,27 @@ class CreatePayment implements RequestInterface
     public function setPrice(int $price): CreatePayment
     {
         $this->price = $price;
+
+        return $this;
+    }
+
+
+    /**
+     * @return string
+     */
+    public function getFullName(): int
+    {
+        return $this->fullName;
+    }
+
+
+    /**
+     * @param string $fullName
+     * @return CreatePayment
+     */
+    public function setFullBame(string $fullName): CreatePayment
+    {
+        $this->fullName = $fullName;
 
         return $this;
     }
@@ -528,6 +562,27 @@ class CreatePayment implements RequestInterface
 
 
     /**
+     * @return PaymentCategory
+     */
+    public function getCategory(): PaymentCategory
+    {
+        return $this->category;
+    }
+
+
+    /**
+     * @param PaymentCategory $category
+     * @return CreatePayment
+     */
+    public function setCategory(PaymentCategory $category): CreatePayment
+    {
+        $this->category = $category;
+
+        return $this;
+    }
+
+
+    /**
      * @return array
      */
     public function getData()
@@ -536,6 +591,7 @@ class CreatePayment implements RequestInterface
             'price' => $this->getPrice(),
             'refId' => $this->getRefId(),
             'email' => $this->getEmail(),
+            'fullName' => $this->getFullName(),
             'label' => $this->getLabel(),
             'method' => $this->getMethod(),
             'curr' => $this->getCurr()
@@ -555,6 +611,7 @@ class CreatePayment implements RequestInterface
             'embedded',
             'eetReport',
             'eetData',
+            'category',
         ];
 
         foreach ($fields as $field) {
