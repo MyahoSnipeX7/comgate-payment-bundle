@@ -165,7 +165,7 @@ class CreatePayment implements RequestInterface
     /**
      * @return string
      */
-    public function getFullName(): int
+    public function getFullName(): string
     {
         return $this->fullName;
     }
@@ -571,10 +571,10 @@ class CreatePayment implements RequestInterface
 
 
     /**
-     * @param PaymentCategory $category
+     * @param string $category
      * @return CreatePayment
      */
-    public function setCategory(PaymentCategory $category): CreatePayment
+    public function setCategory(string $category): CreatePayment
     {
         $this->category = $category;
 
