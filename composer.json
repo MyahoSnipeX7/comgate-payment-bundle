@@ -11,10 +11,10 @@
         }
     ],
     "require": {
-        "php": "^7.3|^8.0|^8.1",
-        "symfony/framework-bundle": "6.4.*",
-        "symfony/yaml": "^6.4",
-        "guzzlehttp/guzzle": "7.7.*"
+        "php": "^7.3|^8.0|^8.1|^8.2",
+        "symfony/framework-bundle": "7.1.*",
+        "symfony/yaml": "^7.1",
+        "guzzlehttp/guzzle": "^7.9"
     },
     "autoload": {
         "psr-4": { "Mysho\\ComgateBundle\\": "" }
