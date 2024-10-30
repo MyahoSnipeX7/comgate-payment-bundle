@@ -1,22 +1,22 @@
 {
-    "name": "mysho/comgate-bundle",
-    "description": "",
-    "type": "symfony-bundle",
-    "license": "MIT",
-    "homepage": "https://github.com/MyshoSnipeX7",
-    "authors": [
-        {
-            "name": "MyshoSnipeX7",
-            "email": "MyshoSnipeX7@gmail.com"
-        }
-    ],
-    "require": {
-        "php": "^7.3|^8.0|^8.1|^8.2",
-        "symfony/framework-bundle": "7.1.*",
-        "symfony/yaml": "^7.1",
-        "guzzlehttp/guzzle": "^7.9"
-    },
-    "autoload": {
-        "psr-4": { "Mysho\\ComgateBundle\\": "" }
-    }
+  "name": "mysho/comgate-bundle",
+  "description": "",
+  "type": "symfony-bundle",
+  "license": "MIT",
+  "homepage": "https://github.com/MyshoSnipeX7",
+  "authors": [
+      {
+          "name": "MyshoSnipeX7",
+          "email": "MyshoSnipeX7@gmail.com"
+      }
+  ],
+  "require": {
+      "php": "^7.3|^8.0|^8.1|^8.2",
+      "symfony/framework-bundle": "^5.0|^6.0|^7.0",
+      "symfony/yaml": "^5.0|^6.0|^7.0",
+      "guzzlehttp/guzzle": "^7.7"
+  },
+  "autoload": {
+      "psr-4": { "Mysho\\ComgateBundle\\": "" }
+  }
 }

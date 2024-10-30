@@ -6,7 +6,7 @@ namespace Mysho\ComgateBundle\Service;
 use GuzzleHttp\Client;
 use Mysho\ComgateBundle\Helper\CreatePaymentResponse;
 use Mysho\ComgateBundle\Helper\RequestInterface;
-
+use Mysho\ComgateBundle\Helper\StatusPaymentResponse;
 
 class ComgateConnector
 {
@@ -38,9 +38,9 @@ class ComgateConnector
 
     /**
      * @param RequestInterface $request
-     * @return CreatePaymentResponse
+     * @param StatusPaymentResponse|CreatePaymentResponse $response
      */
-    public function send(RequestInterface $request)
+    public function send(RequestInterface $request) : StatusPaymentResponse|CreatePaymentResponse
     {
         $baseParams = [
             'merchant' => $this->params["merchant"],
